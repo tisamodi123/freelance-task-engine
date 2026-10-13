@@ -1,4 +1,4 @@
-﻿# Task.io — Service Marketplace & Task Bidding Backend API
+# Freelance Task Engine - On-Demand Service Marketplace & Task Bidding Backend API
 
 A production-ready REST API built with Node.js, Express 5, and MongoDB for an on-demand service marketplace and freelance task bidding platform (similar to TaskRabbit and Urban Company).
 
@@ -57,20 +57,20 @@ Task.io solves this by flipping the process:
 
 ```text
 taskio-backend/
-├── config/             # Database connection & third-party configs
-├── constants/          # System messages and response codes
-├── controllers/        # Route controllers and business logic
-│   └── admin/          # Admin-specific handlers
-├── middleware/         # Auth verification and role gates
-├── models/             # Mongoose schemas (Task, Bid, Business, User, etc.)
-├── routes/             # Express API routes
-│   └── admin/          # Admin routing
-├── utils/              # Helper utilities, mailer, token generators
-├── validatons/         # Joi request validation schemas
-├── .env.example        # Environment variables template
-├── .gitignore          # Repository ignore rules
-├── server.js           # Express app entry point
-└── package.json
++-- config/             # Database connection & third-party configs
++-- constants/          # System messages and response codes
++-- controllers/        # Route controllers and business logic
+�   +-- admin/          # Admin-specific handlers
++-- middleware/         # Auth verification and role gates
++-- models/             # Mongoose schemas (Task, Bid, Business, User, etc.)
++-- routes/             # Express API routes
+�   +-- admin/          # Admin routing
++-- utils/              # Helper utilities, mailer, token generators
++-- validatons/         # Joi request validation schemas
++-- .env.example        # Environment variables template
++-- .gitignore          # Repository ignore rules
++-- server.js           # Express app entry point
++-- package.json
 ```
 
 ---
@@ -78,30 +78,30 @@ taskio-backend/
 ## Key API Endpoints
 
 ### Auth (`/api/v1/auth`)
-- `POST /register` — Register a customer or service provider
-- `POST /login` — Authenticate and receive tokens
-- `POST /refresh-token` — Rotate access token
-- `POST /logout` — Invalidate session
+- `POST /register` � Register a customer or service provider
+- `POST /login` � Authenticate and receive tokens
+- `POST /refresh-token` � Rotate access token
+- `POST /logout` � Invalidate session
 
 ### Tasks (`/api/v1/tasks`)
-- `POST /` — Post a new task with budget and attachments
-- `GET /` — Browse open tasks (filterable by category and city)
-- `GET /:id` — Get full task details
-- `PATCH /:id/status` — Update task status
+- `POST /` � Post a new task with budget and attachments
+- `GET /` � Browse open tasks (filterable by category and city)
+- `GET /:id` � Get full task details
+- `PATCH /:id/status` � Update task status
 
 ### Bids (`/api/v1/bids`)
-- `POST /` — Place a bid on an open task
-- `GET /task/:taskId` — View all bids placed on a task
-- `PATCH /:bidId/accept` — Accept bid and award job
+- `POST /` � Place a bid on an open task
+- `GET /task/:taskId` � View all bids placed on a task
+- `PATCH /:bidId/accept` � Accept bid and award job
 
 ### Businesses (`/api/v1/businesses`)
-- `POST /` — Create a service provider business profile
-- `GET /` — Search businesses by distance, city, and service category
-- `GET /:id` — Get business profile and portfolio
+- `POST /` � Create a service provider business profile
+- `GET /` � Search businesses by distance, city, and service category
+- `GET /:id` � Get business profile and portfolio
 
 ### Reviews (`/api/v1/reviews`)
-- `POST /` — Submit a review and star rating for a completed task
-- `GET /business/:id` — Get verified reviews for a business
+- `POST /` � Submit a review and star rating for a completed task
+- `GET /business/:id` � Get verified reviews for a business
 
 ---
 

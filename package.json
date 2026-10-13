@@ -1,5 +1,5 @@
 {
-  "name": "taskio-backend",
+  "name": "freelance-task-engine",
   "version": "1.0.0",
   "description": "On-Demand Service Marketplace & Task Bidding Platform Backend API",
   "main": "server.js",
