@@ -60,11 +60,11 @@ taskio-backend/
 +-- config/             # Database connection & third-party configs
 +-- constants/          # System messages and response codes
 +-- controllers/        # Route controllers and business logic
-¦   +-- admin/          # Admin-specific handlers
+Â¦   +-- admin/          # Admin-specific handlers
 +-- middleware/         # Auth verification and role gates
 +-- models/             # Mongoose schemas (Task, Bid, Business, User, etc.)
 +-- routes/             # Express API routes
-¦   +-- admin/          # Admin routing
+Â¦   +-- admin/          # Admin routing
 +-- utils/              # Helper utilities, mailer, token generators
 +-- validatons/         # Joi request validation schemas
 +-- .env.example        # Environment variables template
@@ -78,30 +78,30 @@ taskio-backend/
 ## Key API Endpoints
 
 ### Auth (`/api/v1/auth`)
-- `POST /register` — Register a customer or service provider
-- `POST /login` — Authenticate and receive tokens
-- `POST /refresh-token` — Rotate access token
-- `POST /logout` — Invalidate session
+- `POST /register` â€” Register a customer or service provider
+- `POST /login` â€” Authenticate and receive tokens
+- `POST /refresh-token` â€” Rotate access token
+- `POST /logout` â€” Invalidate session
 
 ### Tasks (`/api/v1/tasks`)
-- `POST /` — Post a new task with budget and attachments
-- `GET /` — Browse open tasks (filterable by category and city)
-- `GET /:id` — Get full task details
-- `PATCH /:id/status` — Update task status
+- `POST /` â€” Post a new task with budget and attachments
+- `GET /` â€” Browse open tasks (filterable by category and city)
+- `GET /:id` â€” Get full task details
+- `PATCH /:id/status` â€” Update task status
 
 ### Bids (`/api/v1/bids`)
-- `POST /` — Place a bid on an open task
-- `GET /task/:taskId` — View all bids placed on a task
-- `PATCH /:bidId/accept` — Accept bid and award job
+- `POST /` â€” Place a bid on an open task
+- `GET /task/:taskId` â€” View all bids placed on a task
+- `PATCH /:bidId/accept` â€” Accept bid and award job
 
 ### Businesses (`/api/v1/businesses`)
-- `POST /` — Create a service provider business profile
-- `GET /` — Search businesses by distance, city, and service category
-- `GET /:id` — Get business profile and portfolio
+- `POST /` â€” Create a service provider business profile
+- `GET /` â€” Search businesses by distance, city, and service category
+- `GET /:id` â€” Get business profile and portfolio
 
 ### Reviews (`/api/v1/reviews`)
-- `POST /` — Submit a review and star rating for a completed task
-- `GET /business/:id` — Get verified reviews for a business
+- `POST /` â€” Submit a review and star rating for a completed task
+- `GET /business/:id` â€” Get verified reviews for a business
 
 ---
 
@@ -143,7 +143,3 @@ The API will be live at `http://localhost:5000/api/v1`.
 A health check is available at `GET http://localhost:5000/health`.
 
 ---
-
-## License
-
-This project is open-source and available under the [MIT License](LICENSE).
